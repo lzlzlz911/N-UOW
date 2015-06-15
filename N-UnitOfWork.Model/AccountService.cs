@@ -20,12 +20,6 @@ namespace N_UnitOfWork.Model
             _IUnitOfWork = unitOfWork;
         }
 
-        /// <summary>
-        /// 转账
-        /// </summary>
-        /// <param name="from"></param>
-        /// <param name="to"></param>
-        /// <param name="amount"></param>
         public void Transfer(Account from, Account to, decimal amount)
         {
             if (from.Balance >= amount)

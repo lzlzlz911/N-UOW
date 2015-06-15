@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{fca1a647-1e38-45be-8315-165ac9138594}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>N-UnitOfWork.Modeling</Name>
+    <RootNamespace>N-UnitOfWork.Modeling</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\N-UnitOfWork.Modeling.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\N-UnitOfWork.Infrastructure\N-UnitOfWork.Infrastructure.csproj">
+      <Name>N-UnitOfWork.Infrastructure</Name>
+      <Project>{e7c42e52-f0ec-4030-8e59-7ddae6bd86ce}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\N-UnitOfWork.Model\N-UnitOfWork.Model.csproj">
+      <Name>N-UnitOfWork.Model</Name>
+      <Project>{e5693aea-60bf-477c-adab-fe8b65417a56}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\N-UnitOfWork.Repository\N-UnitOfWork.Repository.csproj">
+      <Name>N-UnitOfWork.Repository</Name>
+      <Project>{aba7d903-d85c-4fcb-a915-8b976ea82cd4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\N-UnitOfWork\N-UnitOfWork.csproj">
+      <Name>N-UnitOfWork</Name>
+      <Project>{6ab6538a-ab50-4028-9864-51904a8c68e0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDiagram1.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+</Project>

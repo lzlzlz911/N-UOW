@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9d439b37-bbb6-433b-972d-1286a3307ed8" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="999a8027-4cfe-4429-9d95-359846965f10" name="N-UnitOfWork.Infrastructure">
+      <references>
+        <reference Id="e34c331b-7892-44bf-9419-d1f80d401753" name="N-UnitOfWork.Infrastructure">
+          <ArtifactNode Label="N-UnitOfWork.Infrastructure" Category="CodeSchema_Project" Id="(Assembly=&quot;$(DesktopUri)/N-QQQ/N-UnitOfWork/N-UnitOfWork/N-UnitOfWork.Infrastructure/N-UnitOfWork.Infrastructure.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=N-UnitOfWork.Infrastructure)" Label="N-UnitOfWork.Infrastructure.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="f8c19a84-b73e-4424-9681-fd55381c1d00" name="N-UnitOfWork.Model">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="68a432e9-48f4-4485-9446-9e66e56f988a" direction="Forward">
+          <layerMoniker Id="999a8027-4cfe-4429-9d95-359846965f10" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="0e04a7c6-402e-4e18-9405-fe5cd2cde258" name="N-UnitOfWork.Model">
+          <ArtifactNode Label="N-UnitOfWork.Model" Category="CodeSchema_Project" Id="(Assembly=&quot;$(DesktopUri)/N-QQQ/N-UnitOfWork/N-UnitOfWork/N-UnitOfWork.Model/N-UnitOfWork.Model.csproj&quot;)" />
+          <ExpandedNode Id="(Assembly=N-UnitOfWork.Model)" Label="N-UnitOfWork.Model.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="ce9491fe-fb0c-472f-b6e5-001dc9c02898" name="N-UnitOfWork.Repository">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="bd24d047-2639-490e-9166-b5a13e2afb11" direction="Forward">
+          <layerMoniker Id="999a8027-4cfe-4429-9d95-359846965f10" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="ac426c31-0309-4a24-8eac-04348b65485d" direction="Forward">
+          <layerMoniker Id="f8c19a84-b73e-4424-9681-fd55381c1d00" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="d4efbdbe-015b-4ee9-879d-ff7e173509bd" name="N-UnitOfWork.Repository">
+          <ArtifactNode Label="N-UnitOfWork.Repository" Category="CodeSchema_Project" Id="(Assembly=&quot;$(DesktopUri)/N-QQQ/N-UnitOfWork/N-UnitOfWork/N-UnitOfWork.Repository/N-UnitOfWork.Repository.csproj&quot;)" />
+          <ExpandedNode Id="(Assembly=N-UnitOfWork.Repository)" Label="N-UnitOfWork.Repository.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="0f4f40e4-d3ec-40b2-823b-0e0ccecbd400" name="N-UnitOfWork">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b8f0bf6b-6ec1-4ca8-b776-6d973ef2b2f8" direction="Forward">
+          <layerMoniker Id="f8c19a84-b73e-4424-9681-fd55381c1d00" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="1da54e16-421e-4c24-8999-1cefe8670eeb" direction="Forward">
+          <layerMoniker Id="999a8027-4cfe-4429-9d95-359846965f10" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="e43b51da-31d2-4b5a-a184-0ea87780d878" direction="Forward">
+          <layerMoniker Id="ce9491fe-fb0c-472f-b6e5-001dc9c02898" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="4a65087e-cbaa-423e-afcc-230d7bdc4f2c" name="N-UnitOfWork">
+          <ArtifactNode Label="N-UnitOfWork" Category="CodeSchema_Project" Id="(Assembly=&quot;$(DesktopUri)/N-QQQ/N-UnitOfWork/N-UnitOfWork/N-UnitOfWork/N-UnitOfWork.csproj&quot;)" />
+          <ExpandedNode Id="(Assembly=N-UnitOfWork)" Label="N-UnitOfWork.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
